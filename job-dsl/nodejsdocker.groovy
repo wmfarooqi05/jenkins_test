@@ -16,7 +16,7 @@ job('NodeJS Docker example') {
         dockerBuildAndPublish {
             repositoryName('wmfarooqi05/jenkins_node_demo')
             tag('${GIT_REVISION,length=9}')
-            registryCredentials('gitlab-deploy')
+            registryCredentials('jenkins-docker')
             forcePull(false)
             forceTag(false)
             createFingerprints(false)
